@@ -19,4 +19,7 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url('', include('social.apps.django_app.urls', namespace="social")),
+    url(r'^$', 'socialApp.views.login'),
+    url(r'^home/$', 'socialApp.views.home'),
+    url(r'^logout/$', 'socialApp.views.logout'),
 ]
