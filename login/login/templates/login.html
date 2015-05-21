@@ -6,5 +6,6 @@
 		<a href="/logout">Log Out</a>
 	{% else %}
 		<a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Log in With Twitter</a>
+		<a href="{% url 'social:begin' 'github' %}?next={{ request.path }}">Log in with Github</a>
 	{% endif %}
 {% endblock content %}
