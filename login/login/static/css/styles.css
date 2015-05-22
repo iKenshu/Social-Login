@@ -52,13 +52,23 @@
 	text-decoration: none;
 	padding: .5em;
 }
+#Social-github:hover{
+	background: #4F4949;
+	box-shadow: 0 6px #2C2929;
+	transition: .5s;
+}
 
 #Social-twitter{
 	margin: .3em;
-	background-color: #55ACEE;
+	background: #55ACEE;
 	color: #FFF;
 	text-decoration: none;
 	padding: .5em;
 	border-radius: .5em;
 	box-shadow: 0 6px #4293D0;
+}
+#Social-twitter:hover{
+	background: #339FF0;
+	box-shadow: 0 6px #1B7FCB;
+	transition: .5s;
 }
