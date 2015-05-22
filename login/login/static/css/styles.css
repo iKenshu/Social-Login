@@ -1,0 +1,64 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?ufmm8m');
+	src:url('../fonts/icomoon.eot?#iefixufmm8m') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?ufmm8m') format('woff'),
+		url('../fonts/icomoon.ttf?ufmm8m') format('truetype'),
+		url('../fonts/icomoon.svg?ufmm8m#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+	content: "\ea93";
+	margin: .3em;
+}
+.icon-github:before {
+	content: "\eab1";
+	margin: .3em;
+}
+#Social-logout{
+	background: #A93B44;
+	color: #FFF;
+	border-radius: .5em;
+	text-decoration: none;
+	padding: .7em;
+	box-shadow: 0 6px #802E35;
+
+}
+#Social-logout:hover{
+	background: #E03442;
+	transition: 1s;
+}
+#Social-github{
+	background: #333;
+	color: #FFF;
+	border-radius: .5em;
+	box-shadow: 0 6px #282828;
+	text-decoration: none;
+	padding: .5em;
+}
+
+#Social-twitter{
+	margin: .3em;
+	background-color: #55ACEE;
+	color: #FFF;
+	text-decoration: none;
+	padding: .5em;
+	border-radius: .5em;
+	box-shadow: 0 6px #4293D0;
+}

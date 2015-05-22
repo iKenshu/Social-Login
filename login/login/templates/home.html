@@ -1,11 +1,14 @@
+{% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Welcome {{ user.get_full_name }}</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/normalize.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
+	<title>Bienvenido {{ user.get_full_name }}</title>
 </head>
 <body>
-	<h1>Welcome {{ user.get_full_name }}</h1>
+	<h1>Bienvenido {{ user.get_full_name }}</h1>
 	{% block content %}
 		
 	{% endblock content %}
