@@ -1,20 +1,20 @@
-from django.shortcuts import render_to_response, redirect, render
+from django.shortcuts import render, redirect
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
-from django.template.context import RequestContext
+from django.utils.decorators import method_decorator
+from django.views.generic.base import TemplateView, View
 
-def login(request):
-	context = RequestContext(request, {
-		'request': request, 'user': request.user
-		})
-	return render(request, 'login.html')
+class LoginTemplateView(TemplateView):
+	template_name = "login.html"
 
-@login_required(login_url='/')
-def home(request):
-	return render_to_response('home.html')
+class HomeTemplateView(TemplateView):
+	template_name = "home.html"
 
-def logout(request):
-	auth_logout(request)
-	return redirect('/')
+	@method_decorator(login_required(login_url='/'))
+	def dispatch(self, request, *args, **kwargs):
+		return super(HomeTemplateView, self).dispatch(request, *args, **kwargs)
 
-# Create your views here.
+class LogoutView(View):
+    def get(self, request, *args, **kwargs):
+        auth_logout(request)
+        return redirect('/')
