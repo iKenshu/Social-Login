@@ -1,14 +1,27 @@
+{% load i18n %}
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{LANGUAGE_CODE}}">
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="{% static "css/normalize.css" %}">
 	<link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
-	<title>Bienvenido {{ user.get_full_name }}</title>
+	<title>{% trans "Welcome" %} {{ user.get_full_name }}</title>
 </head>
 <body>
-	<h1>Bienvenido {{ user.get_full_name }}</h1>
+	<header>
+		<h1 class="Traduction-title">{% trans "Welcome" %} {{ user.get_full_name }}</h1>
+		<form class="Traduction-form" action="/i18n/setlang/" method="post">
+			{% csrf_token %}
+			<input type="hidden" name="next" value="/">
+			<select class="Traduction-select" name="language">
+			{% for lang in LANGUAGES %}
+				<option value="{{ lang.0 }}">{{ lang.1 }}</option>
+			{% endfor %}
+			</select>
+			<input class="Traduction-btn"type="submit" value="Ir">
+		</form>
+	</header>
 	{% block content %}
 		
 	{% endblock content %}

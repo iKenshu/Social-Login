@@ -18,6 +18,7 @@ from django.contrib import admin
 from socialApp.views import LoginTemplateView, HomeTemplateView, LogoutView
 
 urlpatterns = [
+    url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^admin/', include(admin.site.urls)),
     url('', include('social.apps.django_app.urls', namespace="social")),
     url(r'^$', LoginTemplateView.as_view()),

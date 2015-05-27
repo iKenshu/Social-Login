@@ -31,6 +31,30 @@
 	content: "\eab1";
 	margin: .3em;
 }
+.Traduction-title{
+	display: inline-block
+}
+.Traduction-form{
+	display: inline-block;
+}
+.Traduction-select{
+	text-transform: none;
+	background: #067481;
+	border-radius: 5px;
+	box-shadow: 0 5px #152F32;
+	border: none;
+	position: relative;
+	bottom: .3em;
+}
+.Traduction-btn{
+	text-transform: none;
+	background: #F45252;
+	border-radius: 5px;
+	box-shadow: 0 5px #BD3030;
+	border: none;
+	position: relative;
+	bottom: .3em;
+}
 #Social-logout{
 	background: #A93B44;
 	color: #FFF;
